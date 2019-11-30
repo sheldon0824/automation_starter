@@ -142,6 +142,11 @@ class BasePage(object):
             logger.error("Error on click the element %s " % e)
             self.take_window_img()
 
+    # 文本值
+    def get_text(self, selector):
+        # logger.info("Current element has text %s:" % self.find_elements(selector).text)
+        return self.find_elements(selector).text
+
     # 拿到网页标题
     def get_title(self):
         logger.info("Current page's title is:%s" % self.driver.title)

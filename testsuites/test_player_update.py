@@ -1,9 +1,9 @@
 import unittest
 from framework.browser_engine import BrowserEngine
-from pageobjects.baidu_homepage import HomePage
+from pageobjects.cw_login_page import HomePage
 
 
-class GetPageTitle(unittest.TestCase):
+class PlayerUpdate(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
@@ -14,7 +14,7 @@ class GetPageTitle(unittest.TestCase):
     def tearDownClass(cls):
         cls.driver.quit()
 
-    def test_get_page_title(self):
+    def test_new_player(self):
         """页面标题验证测试"""
         homepage = HomePage(self.driver)
         print(homepage.get_title())

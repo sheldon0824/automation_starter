@@ -43,6 +43,7 @@ class BrowserEngine(object):
 
         driver.get(url)
         logger.info("Opening %s" % url)
+        driver.maximize_window()
         driver.implicitly_wait(3)
         logger.info("Set implicitly wait 3 seconds.")
         return driver
